@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   description: "Explore Ahmad Atif's digital creations—a fusion of technology and creativity, inviting you on a captivating journey through the world of web development.",
   generator: "Next.js",
   manifest: "/manifest.json",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#082f49"
 };
 
 export default function RootLayout({

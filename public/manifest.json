@@ -1,8 +1,8 @@
 {
   "name": "Ahmad",
   "short_name": "Ahmad",
-  "theme_color": "#fff",
-  "background_color": "#fff",
+  "theme_color": "#082f49",
+  "background_color": "#082f49",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
