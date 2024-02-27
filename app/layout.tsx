@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PWA with Next 14",
-  description: "PWA application with Next 14",
+  title: "Ahmad Atif | Web Developer",
+  description: "Explore Ahmad Atif's digital creations—a fusion of technology and creativity, inviting you on a captivating journey through the world of web development.",
   generator: "Next.js",
   manifest: "/manifest.json",
 };
