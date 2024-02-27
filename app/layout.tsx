@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "PWA with Next 14",
   description: "PWA application with Next 14",
   generator: "Next.js",
-  manifest: "/portfolio/manifest.json",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({

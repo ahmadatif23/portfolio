@@ -5,8 +5,8 @@
   "background_color": "#0284c7",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "/portfolio",
-  "start_url": "/portfolio",
+  "scope": "/",
+  "start_url": "/",
   "icons": [
     {
       "src": "icons/icon-48x48.png",

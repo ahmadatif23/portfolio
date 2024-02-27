@@ -10,9 +10,7 @@ const withPWA = require("next-pwa")({
 });
 
 const nextConfig = {
-  output: "export",
   reactStrictMode: true,
-  basePath: '/portfolio'
 };
 
 module.exports = withPWA(nextConfig);
