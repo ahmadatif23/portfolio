@@ -5,10 +5,11 @@ import ExperienceComponent from "@/components/home/ExperienceComponent";
 import HomeComponent from "@/components/home/HomeComponent";
 import Background from "@/components/layout/Background";
 import Navbar from "@/components/layout/Navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [component, setComponent] = useState("home");
+  const [showComponent, setShowComponent] = useState(true);
 
   const CurrentComponent = () => {
     switch (component) {
@@ -23,16 +24,20 @@ export default function Home() {
     }
   };
 
+  useEffect(() => {
+    setShowComponent(false);
+
+    setTimeout(() => {
+      setShowComponent(true);
+    }, 500);
+  }, [component]);
+
   return (
-    <main className="relative min-h-[100dvh] w-[100dvw] bg-sky-950">
-      <Background />
+    <main className="flex min-h-[100dvh] w-screen flex-col bg-theme-3 text-theme-5">
+      <Navbar component={component} setComponent={setComponent} />
 
-      <div className="relative z-10 flex h-[100dvh] w-full flex-col">
-        <Navbar component={component} setComponent={setComponent} />
-
-        <div className="flex h-full w-full items-center justify-center">
-          <CurrentComponent />
-        </div>
+      <div className="flex h-full w-full flex-1 items-center justify-center">
+        <HomeComponent />
       </div>
     </main>
   );
