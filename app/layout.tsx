@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
-import "./globals.css";
+import "@/styles/globals.css";
+
+import Navbar from "@/components/shared/Navbar";
 
 const monts = Montserrat({ subsets: ["latin"] });
 
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#082f49",
+  themeColor: "#e0fbfc",
 };
 
 export default function RootLayout({
@@ -23,7 +25,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={monts.className}>{children}</body>
+      <body className={monts.className + " bg-theme-3 text-theme-5"}>
+        <main className="flex min-h-[100dvh] w-screen flex-col">
+          <Navbar />
+
+          <div className="flex h-full w-full flex-1 items-center justify-center">
+            {children}
+          </div>
+        </main>
+      </body>
     </html>
   );
 }
